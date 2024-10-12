@@ -1,11 +1,14 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
+const profileRoutes = require('./routes/profile');
 const app = express();
 const PORT = process.env.PORT || 5001;
+const mongo_uri = "mongodb+srv://tic3901:2401NWRG1@tic3901.omjhh.mongodb.net/?retryWrites=true&w=majority&appName=TIC3901";
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,48 +20,24 @@ let profiles = [
     { id: 3, name: 'Charlie', age: 35 }
 ];
 
-// Get all profiles
-app.get('/api/profiles', (req, res) => {
-    res.json(profiles);
-});
+// middleware
+app.use(express.json())
+app.use((req, res, next) => {
+    console.log('This is a middleware')
+    next()
+})
 
-// Get a single profile
-app.get('/api/profiles/:id', (req, res) => {
-    const profile = profiles.find(p => p.id === parseInt(req.params.id));
-    if (!profile) return res.status(404).send('Profile not found');
-    res.json(profile);
-});
+// routes
+app.use('/profiles', profileRoutes)
 
-// Add a new profile
-app.post('/api/profiles', (req, res) => {
-    const newProfile = {
-        id: profiles.length + 1,
-        name: req.body.name,
-        age: req.body.age
-    };
-    profiles.push(newProfile);
-    res.status(201).json(newProfile);
-});
-
-// Update a profile
-app.put('/api/profiles/:id', (req, res) => {
-    const profile = profiles.find(p => p.id === parseInt(req.params.id));
-    if (!profile) return res.status(404).send('Profile not found');
-
-    profile.name = req.body.name;
-    profile.age = req.body.age;
-    res.json(profile);
-});
-
-// Delete a profile
-app.delete('/api/profiles/:id', (req, res) => {
-    const profileIndex = profiles.findIndex(p => p.id === parseInt(req.params.id));
-    if (profileIndex === -1) return res.status(404).send('Profile not found');
-
-    const deletedProfile = profiles.splice(profileIndex, 1);
-    res.json(deletedProfile);
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+// connect to mongodb
+mongoose.connect(mongo_uri)
+    .then(() => {
+        // listen for requests
+        app.listen(PORT, () => {
+            console.log(`Connected to DB and listening on port ${PORT}`)
+        })
+    })
+    .catch((error) => {
+        console.log(error)
+    })
