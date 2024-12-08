@@ -8,16 +8,15 @@
 3.
 
 ## Vita + React Frontend
-1.Good tutorial for warm up: https://www.youtube.com/watch?v=LDB4uaJ87e0 , https://github.com/bradtraversy/react-crash-2024
-the prograss bar have a directory
+1. Video to warm up react: https://www.youtube.com/watch?v=LDB4uaJ87e0 , https://github.com/bradtraversy/react-crash-2024
 
-##Start Vita + React at your PC
-npm create vita@latest TIC3901
+
+2. npm create vita@latest TIC3901
 
 
 ## Check List 
 1. Add frontend 
-1.1 Add navigation bar, so everyone can put their work inside the directed folder/path
-1.2 Add Auth and Session 
-1.3 Configure the CSS file to make webpage nice
-1.4 Add other functions as planned in last report... like CORF
+2. Add navigation bar, so everyone can put their work inside the directed folder/path
+3. Add Auth and Session 
+4. Configure the CSS file to make webpage nice
+5. Add other functions as planned in last report... like CORF
