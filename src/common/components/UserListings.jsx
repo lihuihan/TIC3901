@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import UserListing from './UserListing';
-import Spinner from './Spinner';
+import UserListing from './UserListing.jsx';
+import Spinner from './Spinner.jsx';
 
 const UserListings = ({ isHome = false }) => {
   const [users, setUsers] = useState([]);
@@ -34,7 +34,9 @@ const UserListings = ({ isHome = false }) => {
           <Spinner loading={loading} />
         ) : (
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            {users.map((user) => (
+            {
+              users.map((user) => (
+
               <UserListing key={user.id} user={user} />
             ))}
           </div>

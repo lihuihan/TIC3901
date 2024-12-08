@@ -1,4 +1,4 @@
-import UserListings from '../components/UserListings';
+import UserListings from '../components/UserListings.jsx';
 
 const UsersPage = () => {
   return (

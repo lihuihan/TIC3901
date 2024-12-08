@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "_comment": "Amend below to Monogo Server after back end settle",
-    "server": "json-server --watch src/jobs.json --port 8000"
+    "server": "json-server --watch src/users.json --port 8000"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",

@@ -5,12 +5,12 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
-import HomePage from './pages/HomePage';
-import UsersPage from './pages/UsersPage';
-import NotFoundPage from './pages/NotFoundPage';
-import UserPage, { UserLoader } from './pages/UserPage';
-import AddUserPage from './pages/AddUserPage';
-import EditUserPage from './pages/EditUserPage';
+import HomePage from './common/pages/HomePage.jsx';
+import UsersPage from './common/pages/UsersPage.jsx';
+import NotFoundPage from './common/pages/NotFoundPage.jsx';
+import UserPage, { userLoader } from './common/pages/UserPage.jsx';
+import AddUserPage from './register/pages/AddUserPage.jsx';
+import EditUserPage from './register/pages/EditUserPage.jsx';
 
 const App = () => {
   // Add New User

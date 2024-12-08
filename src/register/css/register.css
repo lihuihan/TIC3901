@@ -1,0 +1,113 @@
+/* src/styles/userForm.css */
+
+.bg-indigo-50 {
+    background-color: #eef2ff; /* Using Tailwind color equivalence */
+}
+
+.container {
+    margin: auto;
+    max-width: 32rem; /* Adjusted to match max-w-2xl */
+    padding-top: 6rem; /* Equivalent to py-24 */
+    padding-bottom: 6rem; /* Equivalent to py-24 */
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.px-6 {
+    padding-left: 1.5rem; /* Equivalent to Tailwind's px-6 */
+    padding-right: 1.5rem;
+}
+
+.py-8 {
+    padding-top: 2rem; /* Equivalent to Tailwind's py-8 */
+    padding-bottom: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* Equivalent to Tailwind's mb-4 */
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Tailwind's shadow-md */
+}
+
+.rounded-md {
+    border-radius: 0.375rem; /* Tailwind's rounded-md */
+}
+
+.border {
+    border-width: 1px;
+    border-color: #e5e7eb; /* Tailwind's border-gray-300 */
+}
+
+.w-full {
+    width: 100%; /* Tailwind's w-full */
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.text-gray-700 {
+    color: #374151; /* Tailwind's text-gray-700 */
+}
+
+.font-bold {
+    font-weight: 700; /* Tailwind's font-bold */
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem; /* Tailwind's mb-2 */
+}
+
+.text-3xl {
+    font-size: 1.875rem; /* Tailwind's text-3xl */
+}
+
+.text-center {
+    text-align: center; /* Tailwind's text-center */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* Tailwind's text-2xl */
+}
+
+.bg-indigo-500 {
+    background-color: #6366f1; /* Tailwind's bg-indigo-500 */
+}
+
+.hover\:bg-indigo-600:hover {
+    background-color: #4f46e5; /* Tailwind's bg-indigo-600 */
+}
+
+.text-white {
+    color: #ffffff; /* Tailwind's text-white */
+}
+
+.focus\:outline-none:focus {
+    outline: 0; /* Tailwind's focus:outline-none */
+}
+
+.focus\:shadow-outline:focus {
+    box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.5); /* Tailwind's focus:shadow-outline */
+}
+
+.input-large {
+    height: 100px; /* Height for larger inputs, can be customized */
+}
+
+.select {
+    border-radius: 0.375rem; /* Use same rounded style for select */
+}
+
+textarea {
+    border-radius: 0.375rem; /* Use same rounded style for textareas */
+}
