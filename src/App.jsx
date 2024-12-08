@@ -9,7 +9,7 @@ import HomePage from './common/pages/HomePage.jsx';
 import UsersPage from './common/pages/UsersPage.jsx';
 import NotFoundPage from './common/pages/NotFoundPage.jsx';
 import UserPage, { userLoader } from './common/pages/UserPage.jsx';
-import AddUserPage from './register/pages/AddUserPage.jsx';
+import RegisterUserPage from './register/pages/RegisterUserPage.jsx';
 import EditUserPage from './register/pages/EditUserPage.jsx';
 
 const App = () => {
@@ -50,7 +50,7 @@ const App = () => {
       <Route path='/' element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path='/users' element={<UsersPage />} />
-        <Route path='/add-user' element={<AddUserPage addUserSubmit={addUser} />} />
+        <Route path='/register' element={<RegisterUserPage addUserSubmit={addUser} />} />
         <Route
           path='/edit-user/:id'
           element={<EditUserPage updateUserSubmit={updateUser} />}

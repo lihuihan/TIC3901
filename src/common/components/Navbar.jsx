@@ -26,8 +26,8 @@ const Navbar = () => {
                 <NavLink to='/users' className={linkClass}>
                   Users
                 </NavLink>
-                <NavLink to='/add-user' className={linkClass}>
-                  Add User
+                <NavLink to='/register' className={linkClass}>
+                  Register
                 </NavLink>
               </div>
             </div>
