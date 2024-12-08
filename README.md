@@ -15,7 +15,7 @@
 
 
 ## Check List 
-1. Add frontend 
+1. Add frontend -- IN PROGRESS
 2. Add navigation bar, so everyone can put their work inside the directed folder/path
 3. Add Auth and Session 
 4. Configure the CSS file to make webpage nice
