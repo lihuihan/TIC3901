@@ -2,41 +2,41 @@
     "users": [
       {
         "id": "1",
-        "name": "NewTek Solutions",
-        "contactEmail": "contact@teksolutions.com",
-        "contactPhone": "555-555-5551"
+        "name": "Alice",
+        "contactEmail": "alice@gmail.com",
+        "password": "555-555-5551"
       },
       {
         "id": "2",
-        "name": "Veneer Solutions",
-        "contactEmail": "contact@loremipsum.com",
-        "contactPhone": "555-555-5552"
+        "name": "Bob",
+        "contactEmail": "bob@gmail.com",
+        "password": "555-555-5552"
         
       },
       {
         "id": "3",
-        "name": "Dolor Cloud",
-        "contactEmail": "contact@dolorsitamet.com",
-        "contactPhone": "555-555-5553"
+        "name": "Cloud",
+        "contactEmail": "cloud@gmail.com",
+        "password": "555-555-5553"
       },
       {
         "id": "4",
-        "name": "Alpha Elite",
-        "contactEmail": "contact@alpha.com",
-        "contactPhone": "555-555-5554"
+        "name": "Duck",
+        "contactEmail": "duck@gmail.com",
+        "password": "555-555-5554"
         
       },
       {
         "id": "5",
-        "name": "Browning Technologies",
-        "contactEmail": "contact@consecteturadipisicing.com",
-        "contactPhone": "555-555-5555"
+        "name": "Eve",
+        "contactEmail": "eve@gmail.com",
+        "password": "555-555-5555"
       },
       {
         "id": "6",
-        "name": "Port Solutions INC",
-        "contactEmail": "contact@ipsumlorem.com",
-        "contactPhone": "555-555-5556"
+        "name": "Flower",
+        "contactEmail": "flower@gmail.com",
+        "password": "555-555-5556"
       }
     ]
   }

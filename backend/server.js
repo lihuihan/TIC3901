@@ -7,8 +7,8 @@ const path = require('path');
 
 const profileRoutes = require('./routes/profile');
 const app = express();
-const PORT = process.env.PORT || 5001;
-const mongo_uri = "some uri";
+
+const mongo_uri = "mongodb+srv://team3901:team%403901@tic3901.sppvj.mongodb.net/?retryWrites=true&w=majority&appName=TIC3901";
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -34,8 +34,8 @@ app.use('/profiles', profileRoutes)
 mongoose.connect(mongo_uri)
     .then(() => {
         // listen for requests
-        app.listen(PORT, () => {
-            console.log(`Connected to DB and listening on port ${PORT}`)
+        app.listen( () => {
+            console.log(`Connected to DB and listening...`)
         })
     })
     .catch((error) => {
