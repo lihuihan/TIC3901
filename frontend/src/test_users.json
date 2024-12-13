@@ -1,42 +1,40 @@
-{
-    "users": [
+
       {
         "id": "1",
         "name": "Alice",
-        "contactEmail": "alice@gmail.com",
+        "email": "alice@gmail.com",
         "password": "555-555-5551"
       },
       {
         "id": "2",
         "name": "Bob",
-        "contactEmail": "bob@gmail.com",
+        "email": "bob@gmail.com",
         "password": "555-555-5552"
         
       },
       {
         "id": "3",
         "name": "Cloud",
-        "contactEmail": "cloud@gmail.com",
+        "email": "cloud@gmail.com",
         "password": "555-555-5553"
       },
       {
         "id": "4",
         "name": "Duck",
-        "contactEmail": "duck@gmail.com",
+        "email": "duck@gmail.com",
         "password": "555-555-5554"
         
       },
       {
         "id": "5",
         "name": "Eve",
-        "contactEmail": "eve@gmail.com",
+        "email": "eve@gmail.com",
         "password": "555-555-5555"
       },
       {
         "id": "6",
         "name": "Flower",
-        "contactEmail": "flower@gmail.com",
+        "email": "flower@gmail.com",
         "password": "555-555-5556"
       }
-    ]
-  }
+  

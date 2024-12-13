@@ -4,12 +4,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const profileRoutes = require('./routes/profile');
 const app = express();
 
-const mongo_uri = "mongodb+srv://team3901:team%403901@tic3901.sppvj.mongodb.net/?retryWrites=true&w=majority&appName=TIC3901";
-
+const mongo_uri = process.env.ATLAS_URI
 app.use(cors());
 app.use(bodyParser.json());
 

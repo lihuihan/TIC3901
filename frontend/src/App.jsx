@@ -14,6 +14,10 @@ import EditUserPage from './register/pages/EditUserPage.jsx';
 
 const App = () => {
   // Add New User
+  //define function addUser here
+  //if a Post method send to /api/users 
+  //then res ponse is a http response,
+  //whith headre, and body of newUser in json format
   const addUser = async (newUser) => {
     const res = await fetch('/api/users', {
       method: 'POST',
@@ -49,6 +53,10 @@ const App = () => {
     createRoutesFromElements(
       <Route path='/' element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        
+        {/* 
+        <Route path="/login" element = {<Login/>}/> 
+        */}
         <Route path='/users' element={<UsersPage />} />
         <Route path='/register' element={<RegisterUserPage addUserSubmit={addUser} />} />
         <Route
