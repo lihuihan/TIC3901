@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 dotenv.config();
-import userRouter from './routes/user-router.js';
-import HttpError from './models/http-error.js';
+import userRouter from './routes/UserRouter.js';
+import HttpError from './errors/HttpError.js';
 import bodyParser from 'body-parser';
 /**
  * Body Parser can parse incoming JSON requests and convert them into JavaScript 

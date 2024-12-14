@@ -7,7 +7,7 @@ const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const profileRoutes = require('./routes/profile');
+const profileRoutes = require('./routes/ProfileRouter.js');
 const app = express();
 
 const mongo_uri = process.env.ATLAS_URI
