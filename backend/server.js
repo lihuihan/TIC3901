@@ -4,12 +4,13 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const profileRoutes = require('./routes/profile');
 const app = express();
-const PORT = process.env.PORT || 5001;
-const mongo_uri = "mongodb+srv://tic3901:2401NWRG1@tic3901.omjhh.mongodb.net/?retryWrites=true&w=majority&appName=TIC3901";
 
+const mongo_uri = process.env.ATLAS_URI
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -34,8 +35,8 @@ app.use('/profiles', profileRoutes)
 mongoose.connect(mongo_uri)
     .then(() => {
         // listen for requests
-        app.listen(PORT, () => {
-            console.log(`Connected to DB and listening on port ${PORT}`)
+        app.listen( () => {
+            console.log(`Connected to DB and listening...`)
         })
     })
     .catch((error) => {

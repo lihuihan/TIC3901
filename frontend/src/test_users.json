@@ -1,0 +1,40 @@
+
+      {
+        "id": "1",
+        "name": "Alice",
+        "email": "alice@gmail.com",
+        "password": "555-555-5551"
+      },
+      {
+        "id": "2",
+        "name": "Bob",
+        "email": "bob@gmail.com",
+        "password": "555-555-5552"
+        
+      },
+      {
+        "id": "3",
+        "name": "Cloud",
+        "email": "cloud@gmail.com",
+        "password": "555-555-5553"
+      },
+      {
+        "id": "4",
+        "name": "Duck",
+        "email": "duck@gmail.com",
+        "password": "555-555-5554"
+        
+      },
+      {
+        "id": "5",
+        "name": "Eve",
+        "email": "eve@gmail.com",
+        "password": "555-555-5555"
+      },
+      {
+        "id": "6",
+        "name": "Flower",
+        "email": "flower@gmail.com",
+        "password": "555-555-5556"
+      }
+  
