@@ -56,9 +56,15 @@ const Login = () => {
     },[])
     return (
         <div className='flex items-center w-screen h-screen justify-center'>
-            <form onSubmit={signupHandler} className='shadow-lg flex flex-col gap-5 p-8'>
+            <img
+                src="http://www.culturalindia.net/iliimages/Kathakali-ili-63-img-8.jpg" // Replace with your image URL
+                alt="Background"
+                className="absolute inset-0 w-full h-full object-cover filter blur-md"
+                
+            />
+            <form onSubmit={signupHandler} className='relative z-10 shadow-lg flex flex-col gap-5 p-8 bg-white '>
                 <div className='my-4'>
-                    <h1 className='text-center font-bold text-xl'>LOGO</h1>
+                    <h1 className='text-center font-bold text-xl'>KathakalAI</h1>
                     <p className='text-sm text-center'>Login to see photos & videos from your friends</p>
                 </div>
                 <div>
@@ -94,6 +100,7 @@ const Login = () => {
 
                 <span className='text-center'>Dosent have an account? <Link to="/signup" className='text-blue-600'>Signup</Link></span>
             </form>
+            
         </div>
     )
 }
