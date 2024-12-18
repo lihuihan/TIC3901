@@ -56,7 +56,7 @@ const Signup = () => {
     return (
         <div className='flex items-center w-screen h-screen justify-center'>
             <img
-                src="http://www.culturalindia.net/iliimages/Kathakali-ili-63-img-8.jpg" // Replace with your image URL
+                src="https://wallpapercave.com/wp/wp6905436.jpg" // Replace with your image URL
                 alt="Background"
                 className="absolute inset-0 w-full h-full object-cover filter blur-md"
                 
