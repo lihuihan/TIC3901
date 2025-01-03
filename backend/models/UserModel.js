@@ -1,13 +1,12 @@
 import mongoose from 'mongoose';
-
-//schema : blue print for data object
+import bcryptjs from 'bcryptjs';
 
 // Define the user schema
 const userSchema = new mongoose.Schema({
-  _id:{
-    type: Number,              
-    required: true
-
+  _id: {
+    type: mongoose.Schema.Types.ObjectId, // ObjectId type to match MongoDB's native ObjectId
+    required: true,
+    auto: true
   },
   name: {
     type: String,
@@ -18,23 +17,35 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, "Please Enter Your Email"],
-    unique: true
-    //validate: [validator.isEmail, "Please Enter a valid Email"],
+    unique: true,
+    match: [
+      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+      "Please enter a valid email"
+    ]
   },
   password: {
     type: String,
     required: [true, "Please Enter Your Password"],
-    minLength: [8, "Password should be greater than 8 characters"],
-    select: false
+    minLength: [6, "Password should be longer than 6 characters"]
   }
-},{
-  collection: 'users', // Specify the collection name if it's not plural of model name
-  timestamps: true // Automatically adds createdAt and updatedAt fields
+},{ timestamps: true });
 
+// Pre-save hook to hash the password before saving the user
+userSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) {
+    return next();
+  }
+  this.password = await bcryptjs.hash(this.password, 10);
+  next();
 });
 
-// Create the user model
-//Collection : user, 
-const UserModel = mongoose.model('user', userSchema);
+// Method to compare passwords
+userSchema.methods.comparePassword = async function (enteredPassword) {
+  return await bcryptjs.compare(enteredPassword, this.password);
+};
 
-export default UserModel;
+// Create the User model
+const User = mongoose.model('User', userSchema);
+
+// Export the User model as the default export
+export default User;

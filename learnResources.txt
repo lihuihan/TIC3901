@@ -1,0 +1,8 @@
+Node.Js-Authentication-System(Session)
+https://github.com/desphixs/Node.Js-Authentication-System
+
+Full MERN project(Backend+Frontend), JWT auth
+https://github.com/sahandghavidel/mern-auth
+
+React+Vite (Frontend Only) :
+https://github.com/bradtraversy/react-crash-2024

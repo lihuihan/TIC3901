@@ -1,12 +1,12 @@
 import express from 'express';
 //import router from '../routes/user-router';
 import UserModel from '../models/UserModel.js';
+import HttpError from '../utils/HttpError.js';
+import { validationResult } from 'express-validator';
 
 //const uuid = require('uuid/v4');
 //https://github.com/meabhisingh/mernProjectEcommerce/blob/master/backend/controllers/productController.js
 //const {validationResult} = require('express-validator');
-import validationResult from 'express-validator';
-import HttpError from '../errors/HttpError.js';
 //const HttpError = require('../modles/http-error')
 
 
