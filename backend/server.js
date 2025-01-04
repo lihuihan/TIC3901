@@ -8,7 +8,7 @@ const path = require('path');
 const profileRoutes = require('./routes/profile');
 const app = express();
 const PORT = process.env.PORT || 5001;
-const mongo_uri = "mongodb+srv://tic3901:2401NWRG1@tic3901.omjhh.mongodb.net/?retryWrites=true&w=majority&appName=TIC3901";
+const mongo_uri = process.env.MONGO_URI;
 
 app.use(cors());
 app.use(bodyParser.json());
