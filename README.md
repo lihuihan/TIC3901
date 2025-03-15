@@ -1,6 +1,6 @@
 Commands to build and run project
 
-In the main directory :
+In the TIC3901 directory :
 
 'npm run build' 
 
