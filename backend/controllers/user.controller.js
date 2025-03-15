@@ -13,7 +13,8 @@ export const register = async (req, res) => {
                 success: false,
             });
         }
-        if (User.findOne({ email }) != null) {
+        const user = await User.findOne({ email });
+        if (user) {
             return res.status(401).json({
                 message: "Try different email",
                 success: false,
