@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.route.js";
 import postRoute from "./routes/post.route.js";
+import eventRoute from "./routes/event.route.js";
 import messageRoute from "./routes/message.route.js";
 import { app, server } from "./socket/socket.js";
 import path from "path";
@@ -25,10 +26,11 @@ const corsOptions = {
     credentials: true
 }
 app.use(cors(corsOptions));
-
+ 
 // yha pr apni api ayengi
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/post", postRoute);
+app.use("/api/v1/event", eventRoute);
 app.use("/api/v1/message", messageRoute);
 
 

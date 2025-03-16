@@ -6,12 +6,14 @@ import { useSelector } from 'react-redux';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { AtSign, Heart, MessageCircle } from 'lucide-react';
+import CreatePost from './CreatePost';
 
 const Profile = () => {
   const params = useParams();
   const userId = params.id;
   useGetUserProfile(userId);
   const [activeTab, setActiveTab] = useState('posts');
+  const [open, setOpen] = useState(false);
 
   const { userProfile, user } = useSelector(store => store.auth);
 
@@ -42,8 +44,8 @@ const Profile = () => {
                   isLoggedInUserProfile ? (
                     <>
                       <Link to="/account/edit"><Button variant='secondary' className='hover:bg-gray-200 h-8'>Edit profile</Button></Link>
-                      <Button variant='secondary' className='hover:bg-gray-200 h-8'>View archive</Button>
-                      <Button variant='secondary' className='hover:bg-gray-200 h-8'>Ad tools</Button>
+                      <Button  onClick={() => setOpen(true)} variant='secondary' className='hover:bg-gray-200 h-8'>Add Post</Button>
+                      
                     </>
                   ) : (
                     isFollowing ? (
@@ -106,6 +108,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <CreatePost open={open} setOpen={setOpen} />
     </div>
   )
 }

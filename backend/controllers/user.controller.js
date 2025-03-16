@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import getDataUri from "../utils/datauri.js";
 import cloudinary from "../utils/cloudinary.js";
 import { Post } from "../models/post.model.js";
+
+
 export const register = async (req, res) => {
     try {
         const { username, email, password } = req.body;
@@ -36,6 +38,8 @@ export const register = async (req, res) => {
 }
 export const login = async (req, res) => {
     try {
+        console.log(req.body.email);
+        
         const { email, password } = req.body;
         if (!email || !password) {
             return res.status(401).json({
@@ -92,6 +96,7 @@ export const login = async (req, res) => {
 };
 export const logout = async (_, res) => {
     try {
+        
         return res.cookie("token", "", { maxAge: 0 }).json({
             message: 'Logged out successfully.',
             success: true
